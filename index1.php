@@ -14,16 +14,16 @@
 <body>
     <h2> Сайт з нотатками 2</h2> <br>
 
-    <h3> <?php 
-        $files_amount = 6;
-        for ($i = 6; $i <= 20 ; $i++){
+    <h3 class="notes"> <?php 
+        $files_amount = 9;
+        for ($i = 9; $i <= 20 ; $i++){
             if (file_exists("notes/{$i}.txt")){
                 $files_amount++;
             } else {
                 break;
             }
         }
-        for ($j = 6; $j < $files_amount; $j++){
+        for ($j = 9; $j < $files_amount; $j++){
             echo $j;
             $file_array = file("notes/{$j}.txt");
             for ($i=0; $i < count($file_array); $i++){
@@ -35,7 +35,7 @@
         }
             ?></h3>
 
-           <div> Нотатки закінчились </div>
+           <div class = "last-text"> Нотатки закінчились </div>
             <br>
            <a href="create.php">Додати нотатку</a>
            <br>

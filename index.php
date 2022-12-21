@@ -14,9 +14,9 @@
 <body>
     <h2> Сайт з нотатками </h2> <br>
 
-    <h3> <?php
+    <h3 class="notes"> <?php
         $files_amount = 0; // counter amount of files
-        for ($i = 1; $i <= 5; $i++){ // for counting files
+        for ($i = 1; $i <= 8; $i++){ // for counting files
             if (file_exists("notes/{$i}.txt")){
                 $files_amount++;
             } else {
